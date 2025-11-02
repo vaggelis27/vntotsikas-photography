@@ -58,20 +58,22 @@ h6 {
 
 /* Logo Placement */
 .navbar-logo {
-  display: block;
-  padding: 12px 15px;
-  font-size: 19px;
-  line-height: 21px;
-  height: auto;
+  display: inline-block;
   max-width: 120px;
+  height: auto;
+  padding: 0;
 }
 
-/* Center Logo*/
-.navbar .navbar-brand {
-  margin-right: auto;
-  margin: auto;
+/* Navbar styles */
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
 }
 
+/* Logo hover effect */
 .navbar-logo:hover {
   opacity: 0.85;
 }
@@ -116,6 +118,11 @@ h6 {
   transition: transform 0.3s ease;
 }
 
+/* Remove underline hover for logo menu item */
+.navbar-nav .nav-link.p-0::after {
+  display: none;
+}
+
 .nav-link:hover::after {
   transform: scaleX(1);
 }
@@ -153,6 +160,8 @@ p.capitalize {
   justify-content: space-between;
 }
 /* End navbar styles */
+
+/* (reverted) */
 
 /*  Hero */
 .hero-section {
