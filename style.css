@@ -95,33 +95,64 @@ h6 {
   font-weight: 500;
   text-transform: none;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease-out;
 }
 
 #navbar:not(.navbar-scrolled) .nav-link {
   color: #ffffff !important;
 }
 
-/* Hover underline */
-.nav-link::after {
+/* Explosive hover effect for nav links */
+.nav-link:hover {
+  transform: scale(1);
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0.25rem;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  transform: translate(-20%, -20%) scale(0);
+  animation: burst 0.4s ease-out forwards;
+}
+.nav-link:hover::before {
+  background: radial-gradient(circle, rgba(255, 196, 0, 0.808), transparent);
+  z-index: -1;
+}
+.nav-link:hover::after {
+  background: radial-gradient(circle, rgba(255, 174, 0, 0.74), transparent);
+  z-index: -2;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
 }
 
 /* Remove underline hover for logo menu item */
 .navbar-nav .nav-link.p-0::after {
   display: none;
 }
-
-.nav-link:hover::after {
-  transform: scaleX(1);
+/* No effect on the image-only logo item */
+.navbar-nav .nav-link.p-0:hover {
+  transform: none;
+}
+.navbar-nav .nav-link.p-0:hover::before,
+.navbar-nav .nav-link.p-0:hover::after {
+  content: none;
 }
 
 /* ===== NAVBAR THEME ===== */
