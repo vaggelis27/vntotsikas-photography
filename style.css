@@ -46,17 +46,15 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
+/* Mobile */
 @media screen {
   /* Add your responsive styles here */
   @media (max-width: 768px) {
-    .navbar {
-      flex-wrap: wrap;
-    }
   }
 }
 
-/* Logo Placement */
+/* ===== START NAVBAR ===== */
+/* ===== LOGO ===== */
 .navbar-logo {
   display: inline-block;
   max-width: 120px;
@@ -64,8 +62,7 @@ h6 {
   padding: 0;
 }
 
-/* Navbar styles */
-
+/* ===== NAV LINKS CONTAINER ===== */
 .navbar-nav {
   display: flex;
   align-items: center;
@@ -77,7 +74,7 @@ h6 {
 .navbar-logo:hover {
   opacity: 0.85;
 }
-/* Custom black toggler icon (default) */
+/* ===== TOGGLER ===== */
 .custom-toggler .navbar-toggler-icon {
   background-image: none;
   width: 24px;
@@ -92,7 +89,7 @@ h6 {
   box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
 }
 
-/* Links */
+/* ===== NAV LINKS ===== */
 .nav-link {
   color: rgba(0, 0, 0, 0.85) !important;
   font-weight: 500;
@@ -127,7 +124,7 @@ h6 {
   transform: scaleX(1);
 }
 
-/* Always-white navbar theme with dark text and toggler */
+/* ===== NAVBAR THEME ===== */
 #navbar {
   background-color: #000000;
 }
@@ -145,23 +142,20 @@ p.capitalize {
   text-transform: capitalize;
 }
 
+/* Fine-tune toggler and container */
 #navbar .custom-toggler .navbar-toggler-icon {
   background-color: #eeeeee;
   box-shadow: 0 6px 0 #ebebeb, 0 12px 0 #eeeeee;
 }
-
 #navbar .navbar-toggler:focus {
   box-shadow: none;
 }
-
 .navbar .container-fluid {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-/* End navbar styles */
-
-/* (reverted) */
+/* ===== END NAVBAR ===== */
 
 /*  Hero */
 .hero-section {
@@ -394,6 +388,18 @@ p.capitalize {
   }
   .hero-carousel .carousel-caption {
     font-size: 0.85rem;
+  }
+}
+
+/* ===== RESPONSIVE (NAVBAR) ===== */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

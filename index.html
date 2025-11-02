@@ -76,12 +76,15 @@
     <script defer src="./myscripts.js"></script>
   </head>
   <body>
-    <!-- Navbar -->
+    <!-- ===== START NAVBAR ===== -->
     <nav class="navbar navbar-expand-md fixed-top shadow-0" id="navbar">
       <div class="container-fluid flex-wrap">
-        
+        <!-- Mobile brand logo (visible on mobile only) -->
+        <a href="./index.html" class="navbar-brand d-block d-md-none py-0">
+          <img src="./new logo 2025 2.png" alt="VN Logo" class="navbar-logo" />
+        </a>
 
-        <!-- Toggler Button (right) -->
+        <!-- ===== TOGGLER ===== -->
         <button
           class="navbar-toggler custom-toggler ms-auto order-1"
           type="button"
@@ -94,11 +97,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Menu: full width below logo when expanded -->
-        <div
-          class="collapse navbar-collapse w-100 order-2 justify-content-center"
-          id="navbarNav"
-        >
+        <!-- ===== NAV LINKS ===== -->
+        <div class="collapse navbar-collapse w-100 order-2 justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a href="./index.html" class="nav-link">
@@ -110,8 +110,8 @@
                 <i class="bi bi-collection me-1"></i> Gallery
               </a>
             </li>
-            <!-- Center logo as a menu item -->
-            <li class="nav-item">
+            <!-- Desktop-only centered logo inside menu -->
+            <li class="nav-item d-none d-md-block">
               <a href="./index.html" class="nav-link p-0" aria-label="Home">
                 <img src="./new logo 2025 2.png" alt="VN Logo" class="navbar-logo" />
               </a>
@@ -130,7 +130,7 @@
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
+    <!-- ===== END NAVBAR ===== -->
 
     <!-- HERO / GALLERY CAROUSEL -->
     <section class="hero-carousel position-relative">
