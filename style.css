@@ -117,7 +117,7 @@ h6 {
 
 /* Always-white navbar theme with dark text and toggler */
 #navbar {
-background: linear-gradient(160deg, #0eb947, #1f3811 55%, #184737);
+background-color: #000000;
 }
 
 #navbar .nav-link {
