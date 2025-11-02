@@ -83,10 +83,10 @@ h6 {
   box-shadow: 0 6px 0 #000, 0 12px 0 #000;
 }
 
-/* White toggler for top hero (initial) */
+/* Toggler always white (top and scrolled) */
 #navbar:not(.navbar-scrolled) .custom-toggler .navbar-toggler-icon {
-  background-color: #141414;
-  box-shadow: 0 6px 0 #050505, 0 12px 0 #0f0f0f;
+  background-color: #ffffff;
+  box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
 }
 
 /* Links */
@@ -99,7 +99,7 @@ h6 {
 }
 
 #navbar:not(.navbar-scrolled) .nav-link {
-  color: rgba(7, 7, 7, 0.9) !important;
+  color: #ffffff !important;
 }
 
 /* Hover underline */
@@ -121,11 +121,20 @@ h6 {
 
 /* Always-white navbar theme with dark text and toggler */
 #navbar {
-background-color: #000000;
+  background-color: #000000;
 }
 
 #navbar .nav-link {
-  color: #ffffff !important;
+  color: #4b9e24 !important;
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
 }
 
 #navbar .custom-toggler .navbar-toggler-icon {
