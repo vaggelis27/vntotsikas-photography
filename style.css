@@ -157,7 +157,7 @@ h6 {
 
 /* ===== NAVBAR THEME ===== */
 #navbar {
-  background-color: #000000;
+  background: linear-gradient(160deg, #3232a8, #1f4f80 55%, #676f86);
 }
 
 #navbar .nav-link {

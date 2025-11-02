@@ -106,29 +106,6 @@
   });
 })();
 
-// Load navbar from index.html
-// Load the navbar dynamically
-fetch("index.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("navbar-placeholder").innerHTML = data;
-
-    // Highlight active link automatically
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll("#navbar a").forEach((link) => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  });
-
-window.addEventListener("scroll", function () {
-  const navbar = document.getElementById("navbar");
-  if (window.scrollY > 80) {
-    navbar.classList.add("navbar-scrolled");
-  } else {
-    navbar.classList.remove("navbar-scrolled");
-  }
-});
-
+// Note: Removed dynamic navbar injection and duplicate scroll handler
+// to avoid runtime errors and double listeners.
 
