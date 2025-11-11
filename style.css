@@ -53,8 +53,27 @@ h6 {
   }
 }
 
-/* ===== START NAVBAR ===== */
-/* ===== LOGO ===== */
+/* ==== START NAVBAR ==== */
+
+/* Theme Color*/
+#navbar {
+  background: linear-gradient(160deg, #3232a8, #1f4f80 55%, #676f86);
+}
+
+#navbar .nav-link {
+  color: #ffffff !important;
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+
+/* Logo */
 .navbar-logo {
   display: inline-block;
   max-width: 120px;
@@ -62,7 +81,7 @@ h6 {
   padding: 0;
 }
 
-/* ===== NAV LINKS CONTAINER ===== */
+/* Navbar Links Container */
 .navbar-nav {
   display: flex;
   align-items: center;
@@ -74,7 +93,7 @@ h6 {
 .navbar-logo:hover {
   opacity: 0.85;
 }
-/* ===== TOGGLER ===== */
+/* Toggler */
 .custom-toggler .navbar-toggler-icon {
   background-image: none;
   width: 24px;
@@ -89,7 +108,7 @@ h6 {
   box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
 }
 
-/* ===== NAV LINKS ===== */
+/* Navbar Links */
 .nav-link {
   color: rgba(0, 0, 0, 0.85) !important;
   font-weight: 500;
@@ -153,24 +172,6 @@ h6 {
 .navbar-nav .nav-link.p-0:hover::before,
 .navbar-nav .nav-link.p-0:hover::after {
   content: none;
-}
-
-/* ===== NAVBAR THEME ===== */
-#navbar {
-  background: linear-gradient(160deg, #3232a8, #1f4f80 55%, #676f86);
-}
-
-#navbar .nav-link {
-  color: #ffffff !important;
-  text-transform: uppercase;
-}
-
-p.lowercase {
-  text-transform: lowercase;
-}
-
-p.capitalize {
-  text-transform: capitalize;
 }
 
 /* Fine-tune toggler and container */
